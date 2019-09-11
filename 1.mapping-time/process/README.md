@@ -6,3 +6,9 @@ In this clock, I wanted to focus on different styles of bars moving around a scr
 ![alt text](https://github.com/joutwater/dvia-2019/blob/master/1.mapping-time/process/IMG-2769.JPG)
 
 ### Clock 2
+
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/1.mapping-time/process/IMG-2770.JPG)
+
+### Clock 3
+
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/1.mapping-time/process/IMG-2771.JPG)
