@@ -13,8 +13,8 @@ var tickRadius
 var discrete = true
 
 function setup() {
-  createCanvas(640, 360)
-  stroke(255)
+  createCanvas(1080, 500)
+  stroke(120)
 
   var radius = min(width, height) / 2; // this is the maximum possible radius
   secondsRadius = radius * 0.725
@@ -32,13 +32,13 @@ function draw() {
   background(0)
 
   // Draw the clock background
-  fill(80)
+  fill(200)
   noStroke()
   ellipse(cx, cy, clockDiameter, clockDiameter)
 
   // draw 60 dots around the edge corresponding to min/sec angles
   strokeWeight(2)
-  stroke('white')
+  stroke('black')
   beginShape(POINTS)
   for (var a = 0; a < 360; a+=6) {
     var angle = radians(a)
@@ -52,10 +52,10 @@ function draw() {
   stroke(200)
   for (var a = 0; a < 360; a+=30) {
     let angle = radians(a),
-        x0 = cx + cos(angle) * tickRadius,
-        x1 = cx + cos(angle) * dotRadius,
-        y0 = cy + sin(angle) * tickRadius,
-        y1 = cy + sin(angle) * dotRadius
+        x0 = cx,
+        x1 = cx,
+        y0 = cy,
+        y1 = cy
     line(x0, y0, x1, y1)
   }
 
@@ -74,17 +74,18 @@ function draw() {
   }
 
   // Draw the second hand (thin & orange)
-  stroke('orange')
-  strokeWeight(1)
-  line(cx, cy, cx + cos(s)*secondsRadius, cy + sin(s)*secondsRadius)
+  stroke('red')
+  strokeWeight(4)
+  line(200,200)
 
   // draw the minute hand (white and slightly thicker)
-  stroke('white')
-  strokeWeight(3)
+  stroke('blue')
+  strokeWeight(20)
   line(cx, cy, cx + cos(m)*minutesRadius, cy + sin(m)*minutesRadius)
 
   // draw the hour hand (thicker still)
-  strokeWeight(6)
+  stroke('yellow')
+  strokeWeight(1)
   line(cx, cy, cx + cos(h)*hoursRadius, cy + sin(h)*hoursRadius)
 
 }
