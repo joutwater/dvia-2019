@@ -63,9 +63,9 @@ function draw() {
   // Angles for sin() and cos() start at 3 o'clock
   // subtract HALF_PI to make them start at the top
   var now = clock()
-  var s = (now.progress.min * TWO_PI) - HALF_PI
-  var m = (now.progress.hour * TWO_PI) - HALF_PI
-  var h = (now.progress.halfday * TWO_PI) - HALF_PI
+  var s = (now.progress.sec * TWO_PI) - HALF_PI
+  var m = (now.progress.min * TWO_PI) - HALF_PI
+  var h = (now.progress.hour * TWO_PI) - HALF_PI
 
   if (discrete){
     // L[inearly] [int]ERP[olate] from the current fraction of a minute to a
@@ -76,7 +76,7 @@ function draw() {
   // Draw the second hand (thin & orange)
   stroke('red')
   strokeWeight(4)
-  line(200,200)
+  line(cx, cy, cx + cos(s)*secondsRadius, cy + sin(s)*secondsRadius)
 
   // draw the minute hand (white and slightly thicker)
   stroke('blue')

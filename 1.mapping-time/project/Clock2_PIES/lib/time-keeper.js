@@ -123,8 +123,7 @@ var TimeKeeper = function(sel){
             <script language="javascript" type="text/javascript" src="lib/moment.min.js"></script>
             <script language="javascript" type="text/javascript" src="lib/clock.js"></script>
             <script> clockSpeed(${speed}); clockOffset(${offset}, "${step}") </script>
-            <script language="javascript" type="text/javascript" src="sketch.js?v=${nocache}"></script>
-            <script language="javascript" type="text/javascript" src="Clock_1.js?v=${nocache}"></script>
+          
             <script language="javascript" type="text/javascript" src="Clock_2.js?v=${nocache}"></script>
             ${links.join(' ')}
             <style>

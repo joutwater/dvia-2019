@@ -1,4 +1,4 @@
-
+ 
 function setup() {
   createCanvas(512, 256); // set the size of the canvas
   background(255) // fill the canvas with black pixels

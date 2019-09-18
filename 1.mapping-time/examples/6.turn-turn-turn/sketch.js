@@ -27,7 +27,7 @@ function draw() {
   /*hour*/
   push();
   translate(width*0.2, height*0.5);
-  rotate(hRot);
+  shearX(hRot);
   fill(255);
   polygon(0, 0, 82, 3);
   pop();
@@ -42,7 +42,7 @@ function draw() {
   /*minute*/
   push();
   translate(width*0.5, height*0.5);
-  rotate(mRot);
+  shearX(mRot);
   fill(210);
   polygon(0, 0, 70, 4);
   pop();
@@ -50,7 +50,7 @@ function draw() {
   /*second*/
   push();
   translate(width*0.8, height*0.5);
-  rotate(sRot);
+  shearX(sRot);
   fill(180);
   polygon(0, 0, 60, 5);
   pop();

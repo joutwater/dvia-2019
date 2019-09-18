@@ -10,57 +10,56 @@ When "isUpper" is true, a circle is drawn (otherwise a square is)
 */
 
 function setup() {
-  createCanvas(700, 400);
-  ellipseMode(CORNER);
+  createCanvas(800, 400);
+  rectMode(CENTER);
 }
 
 // our custom 'drawShape' function takes a pair of coordinates and will draw a shape at that
 // location whose style is based on where the coordinates are relative to the center of the screen
 function drawShape(x, y){
-  var isLeft = x < width/2 // will be 'true' if x is less than 350
-  if (isLeft){
-    fill(0)
-  }else{
-    fill(255)
-  }
+  rect(x, y, 150, 15);
+  // var isLeft = x < width/2 // will be 'true' if x is less than 350
+  // if (isLeft){
+  //   fill(0)
+  // }else{
+  //   fill(255)
+  // }
 
-  var isUpper = y < height/2 // will be 'false' if y is greater than 200
-  if (isUpper){
-    circle(x, y, 25)
-  }else{
-    rect(x, y, 25, 25)
-  }
+  // var isUpper = y < height/2 // will be 'false' if y is greater than 200
+  // if (isUpper){
+  //   circle(x, y, 25)
+  // }else{
+  //   rect(x, y, 25, 25)
+  // }
 }
 
 
 // try adjusting these starting positions and notice how the block of shapes
 // changes based on where each individual shape is positioned
-var horiz = 200
-var vert = 50
+var horiz = 0.00001
+var vert = 0.00001
 
 function draw(){
-  background(127)
+  background(255, 204, 255)
 
   // draw lines through the horizontal and vertical midpoints of the canvas
-  stroke(0)
-  line(width/2, 0, width/2, height)
-  line(0, height/2, width, height/2)
-  noStroke()
-
+  fill(166, 204, 265);
+ stroke(0, 115, 230);
+ strokeWeight(1);
   // draw the upper row of shapes
   drawShape(horiz, vert)
-  drawShape(horiz+50, vert)
-  drawShape(horiz+100, vert)
+  // drawShape(horiz+50, vert)
+  // drawShape(horiz+100, vert)
 
-  // draw the middle row of shapes
-  drawShape(horiz, vert+50)
-  drawShape(horiz+50, vert+50)
-  drawShape(horiz+100, vert+50)
+  // // draw the middle row of shapes
+  // drawShape(horiz, vert+50)
+  // drawShape(horiz+50, vert+50)
+  // drawShape(horiz+100, vert+50)
 
-  // draw the lower row of shapes
-  drawShape(horiz, vert+100)
-  drawShape(horiz+50, vert+100)
-  drawShape(horiz+100, vert+100)
+  // // draw the lower row of shapes
+  // drawShape(horiz, vert+100)
+  // drawShape(horiz+50, vert+100)
+  // drawShape(horiz+100, vert+100)
 
   /*
    * Try uncommenting one or both of the blocks below. In each case, the starting position for the
@@ -68,12 +67,12 @@ function draw(){
    * zero when the shapes have been pushed entirely off the bottom or right edge of the canvas.
    */
 
-  horiz += 1
+  horiz += 0.2
   if (horiz > width){
     horiz = 0
   }
 
-  vert += 1
+  vert += 0.1
   if (vert > height){
     vert = 0
   }
