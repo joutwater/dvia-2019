@@ -36,7 +36,7 @@ function draw() {
 
   // draw the hours bar at the top...
   fill(166, 12, 0)
-  arc(250, 250, 150, 150, 270, hourWidth);
+  arc(250, 250, 250, 250, 270, hourWidth);
 
   // ...the minutes bar in the middle...
   fill(20, 204, 0)
@@ -44,7 +44,7 @@ function draw() {
 
   // ...and the seconds bar at the bottom
   fill(166, 204, 0)
-  arc(550, 550, 150, 150, 270, secsWidth);
+  arc(550, 550, 50, 50, 270, secsWidth);
 }
 
 

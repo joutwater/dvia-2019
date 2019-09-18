@@ -30,7 +30,20 @@ function draw() {
     minsWidth = 740 * now.progress.hour
     secsWidth = 740 * now.progress.min
   }
-
+  
+  let fromB = color(0);
+  let toB = color(100, 100, 139);
+  let hourColor = lerpColor(fromB, toB, now.progress.day);
+  
+  let fromA = color(150, 61, 139);
+  let toA = color(0, 61, 139);
+  let minColor = lerpColor(fromA, toA, now.progress.hour);
+  
+  let from = color(166, 200, 265);
+  let to = color(166, 100, 265);
+  let secColor = lerpColor(from, to, now.progress.min);
+  
+  
   //draw 3 background bars to indicate the max width
   fill(245)
   rect(x, y,                         maxWidth,  barHeight)
@@ -38,14 +51,16 @@ function draw() {
   rect(x, y + 2*(barHeight+spacing), maxWidth,  barHeight)
 
   // draw the hours bar at the top...
-  fill(166, 12, 265)
+  fill(hourColor)
   rect(30, 30,                         hourWidth, 80)
 
   // ...the minutes bar in the middle...
-  fill(20, 204, 200)
+  fill(minColor)
   rect(30, 30 +    barHeight+spacing,  minsWidth, 80)
 
   // ...and the seconds bar at the bottom
-  fill(166, 204, 265)
+  fill(secColor)
   rect(30, 30 + 2*(barHeight+spacing), secsWidth, 80)
 }
+
+// 166, 204, 265
