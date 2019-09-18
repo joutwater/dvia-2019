@@ -30,16 +30,16 @@ Year month day moon...
 
 This clock relates season to day of the month. I chose to use hue and value to visualize the seasons, with each season having its own color and each color's value changing from light, to dark, to light. The day of the month will use position (a circle moving from top to bottom, filling in each empy circle in sequence) to relate to the time of the season. I think it is interesting to compare the position to the color and value in the background. About three months worth of positioning would have to cycle before the color hue changes. 
 
-![alt text](https://github.com/joutwater/dvia-2019/blob/master/1.mapping-time/process/IMG-2810.JPG)
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/1.mapping-time/process/IMG_2810.JPG)
 
 ### Clock 2A
 
 I am interested in relating my potential lifespan of 100 years to the month within each year. The century timespan would be represented by a circle changing in hue and position (blue to purple, left to right). The month of the year would be shown by texture and position, (sparse point to dense points, left to right).
 
-![alt text](https://github.com/joutwater/dvia-2019/blob/master/1.mapping-time/process/IMG-2811.JPG)
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/1.mapping-time/process/IMG_2811.JPG)
 
 ### Clock 3A
 
 I want to relate Day of the month and the moon cylce in my third clock. The day of the month is shown in s form similsr to an analog clock, applying the retinal variable of orientation and position. The moon cycle is shown by a pie graphic changing shape from no moon, to moon, back to no moon, across the screen. The variables used are shape and position.
 
-![alt text](https://github.com/joutwater/dvia-2019/blob/master/1.mapping-time/process/IMG-2812.JPG)
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/1.mapping-time/process/IMG_2812.JPG)
