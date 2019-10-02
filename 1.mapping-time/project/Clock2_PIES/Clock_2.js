@@ -40,7 +40,7 @@ function draw() {
 
   // ...the minutes bar in the middle...
   fill(20, 204, 0)
-  arc(400, 400, 150, 150, 270, minsWidth);
+  arc(435, 435, 150, 150, 270, minsWidth);
 
   // ...and the seconds bar at the bottom
   fill(166, 204, 0)

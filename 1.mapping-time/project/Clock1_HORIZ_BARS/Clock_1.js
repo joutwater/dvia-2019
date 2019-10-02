@@ -9,7 +9,7 @@ var discrete = false // flag whether to have the bars 'tick' from one value to t
 
 //this gets called only once in the very beginning
 function setup() {
-	createCanvas(800, 600)
+	createCanvas(800, 420)
 }
 
 //this gets called every frame (about 60 frames per second)

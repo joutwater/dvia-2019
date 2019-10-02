@@ -24,7 +24,7 @@ function draw() {
 
   // use the current 'doneness' of the current hour to choose the background color from our gradient
   // (note that setting the background also clears the canvas from our previous round of drawing)
-  var color = colorForProgress(now.progress.hour)
+  var color1 = colorForProgress(now.progress.hour)
   background(color)
 
   // set up typography & drawing-color

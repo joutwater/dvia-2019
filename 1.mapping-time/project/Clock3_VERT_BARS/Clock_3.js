@@ -53,7 +53,7 @@ function draw() {
   push();
   translate(0, -minsWidth)
   fill(166, 0, 265)
-  rect(360, 560, 40 , 40)
+  rect(380, 560, 40 , 40)
   pop();
   
 
@@ -61,7 +61,7 @@ function draw() {
   push();
   translate(0, -secsWidth)
   fill(0, 204, 265)
-  rect(30, 600, 40 , 120)
+  rect(45, 600, 40 , 120)
   pop();
 
 }
