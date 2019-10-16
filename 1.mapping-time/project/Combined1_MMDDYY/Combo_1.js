@@ -129,7 +129,7 @@ function draw() {
     endAngle=TWO_PI;
   }
   noStroke();  
-  fill('#e9c737');
+  fill(255);
   arc(0, 0, 50, 50, startAngle, endAngle);
   pop();
 

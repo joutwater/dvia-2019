@@ -63,12 +63,12 @@ This time represenation is an frankenstein of previous clocks but I think it wil
 
 ### Combined Clock 2
 
-This is also a continuation of another previous idea that I ended up never creating
+This is also a continuation of another previous idea that I ended up never creating. Various elements on the psychic hand represent hours,minutes, and seconds while the moon cycle is added and the sign shows colors of the season.
 
 ![alt text](https://github.com/joutwater/dvia-2019/blob/master/1.mapping-time/process/IMG_2905.jpg)
 
 ### Combined Clock 3
 
-asds
+This example is another combination of previous clocks, but they would be divided by a cool design in the middle, visually separating clock time and calendar time. I think it is nice to give them each their room to shine instead of trying to squeeze them all into one. Almost all retinal variables will be employed in this viz.
 
 ![alt text](https://github.com/joutwater/dvia-2019/blob/master/1.mapping-time/process/IMG_2906.jpg)
