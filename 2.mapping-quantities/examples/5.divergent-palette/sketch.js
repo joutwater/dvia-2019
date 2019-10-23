@@ -8,8 +8,8 @@ function preload(){
 }
 
 function setup(){
-  createCanvas(3200, 700)
-  background(0)
+  createCanvas(3200, 2000);
+  background(0,0,100);
 
   // pick one of the three data files to work with and call it 'data'
   var data = nuke
@@ -19,7 +19,7 @@ function setup(){
   var palette = Brewer.divergent('RdBu', Infinity, -60, 0, 80)
 
   // set up typography
-  textFont("Rokkitt")
+  textFont("inconsolata")
   textSize(16)
   fill(230)
   noStroke()
