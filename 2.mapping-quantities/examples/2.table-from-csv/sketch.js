@@ -11,8 +11,8 @@ function preload(){
 }
 
 function setup(){
-  createCanvas(3200, 2000);
-  background(0,0,100);
+  createCanvas(3200, 4000);
+  background(0);
 
   // pick one of the three data files to work with and call it 'table'
   var table = nuke
@@ -21,9 +21,9 @@ function setup(){
   print(table)
 
   // set up typography
-  textFont("Times New Roman")
+  textFont("Rokkit")
   textSize(16)
-  fill(30)
+  fill(200)
   noStroke()
 
   var x = 200
