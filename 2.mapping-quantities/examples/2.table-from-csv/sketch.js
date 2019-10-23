@@ -1,11 +1,13 @@
 var totals
 var atmospheric
 var underground
+var nuke
 
 function preload(){
   totals = loadTable('data/totals.csv', 'csv', 'header')
   atmospheric = loadTable('data/atmospheric.csv', 'csv', 'header')
   underground = loadTable('data/underground.csv', 'csv', 'header')
+  nuke = loadTable('data/CODENAMES_NUKE.csv', 'csv', 'header')
 }
 
 function setup(){
@@ -13,7 +15,7 @@ function setup(){
   background(230)
 
   // pick one of the three data files to work with and call it 'table'
-  var table = totals
+  var table = nuke
 
   // log the whole dataset to the console so we can poke around in it
   print(table)
