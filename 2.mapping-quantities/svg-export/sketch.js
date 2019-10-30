@@ -1,6 +1,6 @@
 function setup(){
   // Add a final argument of `SVG` to your createCanvas command
-  createCanvas(300, 200, SVG)
+  createCanvas(500, 500, SVG)
 
   background(100)
   noStroke()
@@ -14,5 +14,5 @@ function setup(){
   // After you've finished drawing, use the `save` command to pick a filename. 
   // Now, every time you reload  the page the browser will download a new SVG 
   // file with that name
-  save('my-sketch.svg')
+  // save('my-sketch.svg')
 }

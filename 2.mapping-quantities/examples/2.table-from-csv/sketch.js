@@ -58,6 +58,10 @@ function setup(){
     for (var c=1; c<table.getColumnCount(); c++){
       var value = table.getNum(r, c)
       text(value, x, y)
+      // var series = table.columns[c];
+      // var clr = palette.colorForValue(series);
+      // fill(clr);
+      // ellipse(x,y,value);
       y += rowHeight
     }
     x += colWidth
