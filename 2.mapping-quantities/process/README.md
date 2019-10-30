@@ -43,5 +43,5 @@ Nuclear
 ![alt text](https://github.com/joutwater/dvia-2019/blob/master/2.mapping-quantities/process/Nuclear.png)
 
 Vietnam
-![alt text](https://github.com/joutwater/dvia-2019/blob/master/2.mapping-quantities/process/vietnam.png)
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/2.mapping-quantities/process/Vietnam.png)
 
