@@ -27,3 +27,21 @@ This chart shows the total amount of each type of test conducted by any country 
 
 ![alt text](https://github.com/joutwater/dvia-2019/blob/master/2.mapping-quantities/process/IMG_2991.jpg)
 
+### Second Round Practice sketches
+
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/2.mapping-quantities/process/IMG-3027.jpg)
+
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/2.mapping-quantities/process/IMG-3028.jpg)
+
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/2.mapping-quantities/process/IMG-3029.jpg)
+
+### Third Round Practice sketches
+
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/2.mapping-quantities/process/concept-3.png)
+
+Nuclear
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/2.mapping-quantities/process/Nuclear.png)
+
+Vietnam
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/2.mapping-quantities/process/vietnam.png)
+
