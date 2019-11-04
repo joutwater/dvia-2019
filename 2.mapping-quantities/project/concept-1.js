@@ -1,32 +1,49 @@
-const headerRows = 1,
-	    dataRows = 2,
-      cols = 12,
-      marginHeight = 0.1,
-      showVerticalCenterLines = true;
+const headerRows = 0,
+	  dataRows = 2,
+      cols = 4,
+      marginHeight = 0.3,
+      showVerticalCenterLines = false;
 
-var rowHeight=200
-    rowWidth=600
-    colWidth=500
-  	rowMargin=60
-    rowX=50
+// var rowHeight=200
+//     rowWidth=600
+//     colWidth=1000
+//   	rowMargin=60
+//     rowX=50
+
+var rowHeight,
+    rowWidth,
+    colWidth,
+  	rowMargin,
+    rowX;
+
+// function preload(){
+//   nuke = loadJSON('data/nuke_1964.json')
+//   viet = loadJSON('data/viet_1964.json')
+// }
 
 function setup(){
-	createCanvas(1000, 1000);
-    // noLoop();
-  	//
-    // 	rowHeight = height / (headerRows + dataRows);
-    // 	colWidth = width / (cols + 1);
-    // 	rowMargin = rowHeight * marginHeight;
-    // 	rowX = colWidth / 2;
-    // 	rowWidth = cols * colWidth;
-    //
-  	let data = [opData, shotData];
+    createCanvas(1000, 1000);
+// 	createCanvas(1000, 1000, SVG);
+    noLoop();
+  	
+    	rowHeight = height / (headerRows + dataRows);
+    	colWidth = width / (cols + 1);
+    	rowMargin = rowHeight * marginHeight;
+    	rowX = colWidth / 2;
+    	rowWidth = cols * colWidth;
+    	
+    // var shotData = nuke;
+    // var opData = viet;
+    
+  	let data = [shotData, opData];
   	for (let i=0, r=headerRows, end=headerRows+dataRows; r<end; r++, i++){
     	let rowY = r * rowHeight + rowMargin/2,
             actualRowHeight = rowHeight - rowMargin,
             rowData = data[i];
       	createRow(rowY, actualRowHeight, rowData);
     }
+    
+    //   save('1964.svg')
 }
 
 function createRow(rowY, actualRowHeight, rowData){
@@ -37,18 +54,9 @@ function createRow(rowY, actualRowHeight, rowData){
     }
   	//draw cartesian axes
   	stroke("black");
-  	strokeWeight(4);
-  	line(rowX, rowY, rowX, rowY+actualRowHeight);
-	  line(rowX, rowY+actualRowHeight, rowX+rowWidth, rowY+actualRowHeight);
-  	//year label
-  	textSize(12); //TODO: remove hard coding
-  	textAlign(LEFT, BOTTOM);
-  	push();
-  	translate(rowX-6, rowY+actualRowHeight); //TODO: half font size, remove hard coding
-  	rotate(-HALF_PI);
-  	noStroke();
-  	text(rowData.year, 0, 0);
-  	pop();
+  	strokeWeight(2);
+    //line(rowX, rowY, rowX, rowY+actualRowHeight);
+	line(rowX, rowY, rowX+rowWidth, rowY);
   	//draw month center lines
   	if (showVerticalCenterLines){
         stroke("silver");
@@ -57,15 +65,16 @@ function createRow(rowY, actualRowHeight, rowData){
             line(x, rowY, x, rowY+actualRowHeight);
         }
     }
-  	//text
+  	//data text
+  	noStroke();
   	let [monthDataArray, monthDataProp] = (rowData.ops) ? [rowData.ops, "ops"] : [rowData.shots, "shot"],
-        startingY = rowY+actualRowHeight-2, //TODO: text margin, remove hardcoding
+        startingY = rowY+20, //TODO: text margin, remove hardcoding
         y,
-        changeInY = -12, //TODO: changeInY is vertical positioning of text, remove hardcoding
+        changeInY = +18, //TODO: changeInY is vertical positioning of text, remove hardcoding
         x;
   	monthDataArray.sort((a,b)=>a.month-b.month); //sort ascending by month
-  	textSize(10);
-  	textAlign(CENTER, BOTTOM);
+  	textSize(13);
+  	textAlign(LEFT, BOTTOM);
   	for (let m of monthDataArray){
     	if (x !== monthX[m.month-1]){
           	//moving to a new column
@@ -82,92 +91,92 @@ const opData = {"year": 1964,
           {"month": 1, "ops": "DeSoto"},
           {"month": 1, "ops": "Unnamed 2"},
           {"month": 1, "ops": "Unnamed 3"},
-          {"month": 4, "ops": "Lam Son"},
-          {"month": 4, "ops": "Quyet Thang"},
-          {"month": 5, "ops": "Chuong Duong"},
-          {"month": 5, "ops": "Leaping Lena"},
-          {"month": 5, "ops": "Yankee Team"},
-          {"month": 5, "ops": "Unnamed 6"},
-          {"month": 5, "ops": "Dan Chi 132"},
-          {"month": 5, "ops": "Chinh Nghia"},
-          {"month": 5, "ops": "Quyet Thang 303"},
-          {"month": 6, "ops": "Unnamed 6"},
-          {"month": 6, "ops": "Quyet Thang 404"},
-          {"month": 6, "ops": "33-64"},
-          {"month": 7, "ops": "Unnamed 6"},
-          {"month": 7, "ops": "Chinh Nghia 36"},
-          {"month": 7, "ops": "Quang Ngai 16"},
-          {"month": 7, "ops": "Le Loi 9"},
-          {"month": 7, "ops": "Unnamed 6"},
-          {"month": 8, "ops": "Unnamed 6"},
-          {"month": 8, "ops": "Unnamed 6"},
-          {"month": 8, "ops": "Pierce Arrow"},
-          {"month": 8, "ops": "Chinh Nghia"},
-          {"month": 8, "ops": "Unnamed 6"},
-          {"month": 8, "ops": "Tu Cuong 124"},
-          {"month": 8, "ops": "Dan Chi 54"},
-          {"month": 8, "ops": "Quyet Thang 606"},
-          {"month": 8, "ops": "Lien Lu 7"},
-          {"month": 8, "ops": "Thang Long 18"},
-          {"month": 8, "ops": "Binh Thuan 39"},
-          {"month": 9, "ops": "Hop Tap"},
-          {"month": 10, "ops": "Project Delta"},
-          {"month": 10, "ops": "Dan Chi 80"},
-          {"month": 11, "ops": "Unnamed 13"},
-          {"month": 12, "ops": "Barrel Roll"},
-          {"month": 12, "ops": "Dan Chi 100"}
+          {"month": 2, "ops": "Lam Son"},
+          {"month": 2, "ops": "Quyet Thang"},
+          {"month": 2, "ops": "Chuong Duong"},
+          {"month": 2, "ops": "Leaping Lena"},
+          {"month": 2, "ops": "Yankee Team"},
+          {"month": 2, "ops": "Unnamed 6"},
+          {"month": 2, "ops": "Dan Chi 132"},
+          {"month": 2, "ops": "Chinh Nghia"},
+          {"month": 2, "ops": "Quyet Thang 303"},
+          {"month": 2, "ops": "Unnamed 6"},
+          {"month": 2, "ops": "Quyet Thang 404"},
+          {"month": 2, "ops": "33-64"},
+          {"month": 3, "ops": "Unnamed 6"},
+          {"month": 3, "ops": "Chinh Nghia 36"},
+          {"month": 3, "ops": "Quang Ngai 16"},
+          {"month": 3, "ops": "Le Loi 9"},
+          {"month": 3, "ops": "Unnamed 6"},
+          {"month": 3, "ops": "Unnamed 6"},
+          {"month": 3, "ops": "Unnamed 6"},
+          {"month": 3, "ops": "Pierce Arrow"},
+          {"month": 3, "ops": "Chinh Nghia"},
+          {"month": 3, "ops": "Unnamed 6"},
+          {"month": 3, "ops": "Tu Cuong 124"},
+          {"month": 3, "ops": "Dan Chi 54"},
+          {"month": 3, "ops": "Quyet Thang 606"},
+          {"month": 3, "ops": "Lien Lu 7"},
+          {"month": 3, "ops": "Thang Long 18"},
+          {"month": 3, "ops": "Binh Thuan 39"},
+          {"month": 3, "ops": "Hop Tap"},
+          {"month": 4, "ops": "Project Delta"},
+          {"month": 4, "ops": "Dan Chi 80"},
+          {"month": 4, "ops": "Unnamed 13"},
+          {"month": 4, "ops": "Barrel Roll"},
+          {"month": 4, "ops": "Dan Chi 100"}
       ]
   };
     
 const shotData = {"year": 1964,
-   "shots": [
-      	{"month": 1, "shot": "Fore"},
+  "shots": [
+        {"month": 1, "shot": "Fore"},
         {"month": 1, "shot": "Oconto"},
         {"month": 1, "shot": "Club"},
-        {"month": 2, "shot": "Solendon"},
-        {"month": 2, "shot": "Bunker"},
-        {"month": 2, "shot": "Bonefish"},
-        {"month": 2, "shot": "Mackerel"},
-        {"month": 2, "shot": "Klickitat"},
-        {"month": 3, "shot": "Handicap"},
-        {"month": 3, "shot": "Pike"},
-        {"month": 4, "shot": "Hook"},
-        {"month": 4, "shot": "Sturgeon"},
-        {"month": 4, "shot": "Bogey"},
-        {"month": 4, "shot": "Turf"},
-        {"month": 4, "shot": "Pipefish"},
-        {"month": 5, "shot": "Driver"},
-        {"month": 5, "shot": "Backswing"},
-        {"month": 5, "shot": "Minnow"},
-        {"month": 6, "shot": "Ace"},
-        {"month": 6, "shot": "Bitterling"},
-        {"month": 6, "shot": "Duffer"},
-        {"month": 6, "shot": "Fade"},
-        {"month": 6, "shot": "Dub"},
-        {"month": 7, "shot": "Bye"},
-        {"month": 7, "shot": "Links"},
-        {"month": 7, "shot": "Trogon"},
-        {"month": 8, "shot": "Alva"},
-        {"month": 8, "shot": "Canvasback"},
-        {"month": 8, "shot": "Player"},
-        {"month": 8, "shot": "Haddock"},
-        {"month": 9, "shot": "Guanay"},
-        {"month": 9, "shot": "Spoon"},
-        {"month": 10, "shot": "Auk"},
-        {"month": 10, "shot": "Par"},
-        {"month": 10, "shot": "Barbel"},
-        {"month": 10, "shot": "Turnstone"},
-        {"month": 10, "shot": "Salmon"},
-        {"month": 10, "shot": "Garden"},
-        {"month": 10, "shot": "Forest"},
-        {"month": 11, "shot": "Handcar"},
-        {"month": 12, "shot": "Crepe"},
-        {"month": 12, "shot": "Drill_S"},
-        {"month": 12, "shot": "Drill_SS"},
-        {"month": 12, "shot": "Parrot"},
-        {"month": 12, "shot": "Cassowary "},
-        {"month": 12, "shot": "Hoopoe"},
-        {"month": 12, "shot": "Mudpack"},
-        {"month": 12, "shot": "Sulky"}
+        {"month": 1, "shot": "Solendon"},
+        {"month": 1, "shot": "Bunker"},
+        {"month": 1, "shot": "Bonefish"},
+        {"month": 1, "shot": "Mackerel"},
+        {"month": 1, "shot": "Klickitat"},
+        {"month": 1, "shot": "Handicap"},
+        {"month": 1, "shot": "Pike"},
+        {"month": 2, "shot": "Hook"},
+        {"month": 2, "shot": "Sturgeon"},
+        {"month": 2, "shot": "Bogey"},
+        {"month": 2, "shot": "Turf"},
+        {"month": 2, "shot": "Pipefish"},
+        {"month": 2, "shot": "Driver"},
+        {"month": 2, "shot": "Backswing"},
+        {"month": 2, "shot": "Minnow"},
+        {"month": 2, "shot": "Ace"},
+        {"month": 2, "shot": "Bitterling"},
+        {"month": 2, "shot": "Duffer"},
+        {"month": 2, "shot": "Fade"},
+        {"month": 2, "shot": "Dub"},
+        {"month": 3, "shot": "Bye"},
+        {"month": 3, "shot": "Links"},
+        {"month": 3, "shot": "Trogon"},
+        {"month": 3, "shot": "Alva"},
+        {"month": 3, "shot": "Canvasback"},
+        {"month": 3, "shot": "Player"},
+        {"month": 3, "shot": "Haddock"},
+        {"month": 3, "shot": "Guanay"},
+        {"month": 3, "shot": "Spoon"},
+        {"month": 4, "shot": "Auk"},
+        {"month": 4, "shot": "Par"},
+        {"month": 4, "shot": "Barbel"},
+        {"month": 4, "shot": "Turnstone"},
+        {"month": 4, "shot": "Salmon"},
+        {"month": 4, "shot": "Garden"},
+        {"month": 4, "shot": "Forest"},
+        {"month": 4, "shot": "Handcar"},
+        {"month": 4, "shot": "Crepe"},
+        {"month": 4, "shot": "Drill_S"},
+        {"month": 4, "shot": "Drill_SS"},
+        {"month": 4, "shot": "Parrot"},
+        {"month": 4, "shot": "Cassowary "},
+        {"month": 4, "shot": "Hoopoe"},
+        {"month": 4, "shot": "Mudpack"},
+        {"month": 4, "shot": "Sulky"}
     ]
   };
