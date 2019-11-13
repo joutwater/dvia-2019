@@ -18,10 +18,10 @@ function setup(){
   // Add a final argument of `SVG` to your createCanvas command
   createCanvas(1000, 1000, SVG)
   
-  noLoop();
 
   background(100)
   
+  noLoop();
   // svgSave();
   
       rowHeight = height / (headerRows + dataRows);
@@ -37,15 +37,14 @@ function setup(){
             rowData = data[i];
       	createRow(rowY, actualRowHeight, rowData);
     }
-    
-      save('my-sketch.svg'); 
+   save('my-sketch.svg')   
 } 
 
   // After you've finished drawing, use the `save` command to pick a filename. 
   // Now, every time you reload  the page the browser will download a new SVG 
   // file with that name
   // var svgSave = function () {
-  //   save('my-sketch.svg')
+    // save('my-sketch.svg')
   // }
   
   //   svgSave();
@@ -54,6 +53,7 @@ function setup(){
 
 
 function createRow(rowY, actualRowHeight, rowData){
+    console.log('createRow')
   	let monthColWidth = rowWidth / (cols+1),
         monthX = [];
   	for (let i=1; i<=cols; i++){
@@ -91,10 +91,11 @@ function createRow(rowY, actualRowHeight, rowData){
       	text(m[monthDataProp], x, y);
       	y += changeInY;
     }
-    
- 
-  
+  // save('my-sketch.svg');   
+  noLoop();
+
 }
+
 
 
 
