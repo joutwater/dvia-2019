@@ -1,0 +1,74 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="libraries/leaflet/leaflet.css" /> <!-- default styles -->
+  <link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+    }
+    
+    h1 {
+      font-size: 150px;
+      font-family: 'Zilla slab';
+      text-align: center;
+    }
+    
+    h2 {
+      font-size: 30px;
+      font-family: 'Zilla slab';
+      text-align: left;
+			margin-left: 450px;
+			margin-right: 450px;
+			margin-bottom: 100px;   
+    }
+
+    /* default dimensions for the leaflet map */
+    #quake-map{
+      margin-top: 50px;
+      width: 1000px;
+      height: 600px;
+      display: inline-block;
+    }
+    
+    .wrapper{
+      text-align: center;
+    }
+    
+    .leaflet-popup-content p {
+      margin: 0;
+    }
+    
+    #defaultCanvas0{
+      display: inline-block;
+      text-align: center;
+    }
+    
+    /*path{*/
+    /*  stroke-width: 1;*/
+    /*}*/
+  </style>
+</head>
+<body>
+  <h1>The Big One</h1>
+  <h2>Even in this day and age, top seismologists at USGS and other organizations are unable to predict earthquakes. However, many specialists have pointed out that they expect the infamous “big one” to rock California in the next thirty to fifty years. The primary evidence leading to this claim is that portions of the San Andreas Faultline and subsidiary faults have been in lock since the mid-twentieth century. Once the tectonic plates force these fault crusts out of lock, it will theoretically cause a large earthquake. As a Californian and geospatial specialist, I humbly wish to make a best guess as to where and at what depth the big one will occur. If scientists can’t predict it anyways, why not practice some mapping techniques and give it a try!</h2>
+  <!-- The container div for our leaflet map -->
+  <div class="wrapper"><div id="quake-map"></div></div>
+
+  <!-- load our dependencies and sketch file -->
+  <script src="libraries/leaflet/leaflet.js"></script>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/chroma.min.js"></script>
+  <script src="libraries/lodash.min.js"></script>
+  <script src="libraries/brewer.js"></script>
+  <script src="libraries/tectonic.js"></script>
+  <script src="leaflet_overall.js"></script>
+  <script src="leaflet_sketch.js"></script>
+  <script src="diagram.js"></script>
+  <!--<script src=""></script>-->
+
+  <!-- p5.js will create a canvas element here at runtime -->
+</body>
+</html>
