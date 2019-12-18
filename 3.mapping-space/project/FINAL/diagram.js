@@ -24,8 +24,13 @@ var depths;
 
 function diagram_setup(p5_table) {
   console.log(p5_table)
-  createCanvas(1000, 200);
+  
+  var canvas = createCanvas(1000, 300);
+  
+  canvas.parent('sketch-holder');
+  
   background(150);
+  
 
   // define top left and bottom right corner of our plot
   plotX1 = 5;
@@ -33,23 +38,24 @@ function diagram_setup(p5_table) {
   plotY1 = 5;
   plotY2 = height- plotY1;
 
-  // draw a background rectangle for the plot
-  fill(220);
-  noStroke();
-  rectMode(CORNERS);
-  rect(plotX1, plotY1, plotX2, plotY2);
-
   strokeWeight(5);
   stroke(255,0,0,100);
   drawDataPoints(p5_table);
 }
 
-function drawDataPoints(p5_table){
+function drawDataPoints(p5_table, highlightId){
+  // console.log("hello");
+  // draw a background rectangle for the plot
+  fill(220);
+  noStroke();
+  rectMode(CORNERS);
+  rect(plotX1, plotY1, plotX2, plotY2);
+  
   // get the two arrays of interest: time and magnitude
   long = p5_table.getColumn("longitude");
   depths = p5_table.getColumn("depth");
   mags = p5_table.getColumn("mag");
-
+  ids = p5_table.getColumn("id");
   // get minimum and maximum values for both
   depthMin = 0.0;
   depthMax = 25.0;
@@ -63,7 +69,11 @@ function drawDataPoints(p5_table){
     // map the y position to magnitude
     var y = map(depths[i],depthMin, depthMax, plotY2-20, plotY1);
     stroke(150);
-    strokeWeight(0.5);
+    strokeWeight(1);
+    if(highlightId === ids[i]){
+      strokeWeight(2);
+      stroke(255,0,0)
+    } 
     line(x,y,x,5);
     stroke(255,165,0,150);
     strokeWeight(2.0*mags[i]^3.5);

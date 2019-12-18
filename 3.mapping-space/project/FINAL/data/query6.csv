@@ -1,0 +1,16 @@
+time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type,horizontalError,depthError,magError,magNst,status,locationSource,magSource
+1992-06-28T11:57:34.130Z,34.2,-116.437,-0.097,7.3,mw,0,43.4,,0.194,ci,ci3031111,2019-10-18T03:09:09.708Z,"Landers, California Earthquake",earthquake,,0.31,,0,reviewed,ci,ci
+2019-07-06T03:19:53.040Z,35.7695,-117.5993333,8,7.1,mw,77,43,0.04616,0.22,ci,ci38457511,2019-12-07T03:30:04.433Z,2019 Ridgecrest Earthquake Sequence,earthquake,0.19,31.61,,0,reviewed,ci,ci
+1999-10-16T09:46:44.460Z,34.6033333,-116.265,13.73,7.1,mw,73,57,,0.31,ci,ci9108652,2017-04-26T17:56:24.046Z,"16km SW of Ludlow, CA",earthquake,0.35,31.61,,0,reviewed,ci,ci
+1989-10-18T00:04:15.190Z,37.0361667,-121.8798333,17.214,6.9,mh,84,89,0.008108,0.08,nc,nc216859,2019-11-01T07:59:39.549Z,"Loma Prieta, California Earthquake",earthquake,0.21,0.31,,0,reviewed,nc,nc
+1994-01-17T12:30:55.390Z,34.213,-118.537,18.202,6.7,mw,0,29.7,,0.31,ci,ci3144585,2018-02-15T17:40:30.169Z,"1km NNW of Reseda, CA",earthquake,,0.403,,0,reviewed,ci,ci
+1983-05-02T23:42:38.060Z,36.2316667,-120.312,9.578,6.7,ml,64,137,0.03063,0.07,nc,nc1091100,2019-07-06T19:15:12.092Z,Central California,earthquake,0.28,0.24,,0,reviewed,nc,nc
+1987-11-24T13:15:56.710Z,33.015,-115.852,11.181,6.6,mw,0,51.3,,0.388,ci,ci628016,2018-06-04T20:43:45.000Z,"22km W of Westmorland, CA",earthquake,,0.765,,0,reviewed,ci,ci
+2003-12-22T19:15:56.240Z,35.7005,-121.1005,8.382,6.5,mw,65,71,0.04685,0.07,nc,nc21323712,2018-03-01T19:08:55.445Z,Central California,earthquake,0.16,0.6,,4,reviewed,nc,nc
+2019-07-04T17:33:49.000Z,35.7053333,-117.5038333,10.5,6.4,mw,62,47,0.1233,0.16,ci,ci38443183,2019-11-28T18:39:51.566Z,Ridgecrest Earthquake Sequence,earthquake,0.15,0.36,,6,reviewed,ci,ci
+1992-06-28T15:05:30.730Z,34.203,-116.827,3.634,6.3,mw,0,95.4,,0.226,ci,ci3031425,2018-01-11T19:56:58.917Z,"7km SSE of Big Bear City, CA",earthquake,,91.295,,0,reviewed,ci,ci
+1987-11-24T01:54:14.660Z,33.09,-115.792,10.853,6.2,mw,0,35.4,,0.321,ci,ci134894,2018-06-04T20:43:45.000Z,"17km WNW of Westmorland, CA",earthquake,,0.453,,0,reviewed,ci,ci
+1984-04-24T21:15:18.760Z,37.3096667,-121.6788333,8.193,6.2,ml,101,26,0.05135,0.06,nc,nc17204,2018-06-04T20:43:45.000Z,Northern California,earthquake,0.11,0.31,,0,reviewed,nc,nc
+1992-04-23T04:50:23.230Z,33.96,-116.317,11.629,6.1,mw,0,63.1,,0.256,ci,ci3019681,2017-04-26T17:46:33.037Z,"17km NNE of Thousand Palms, California",earthquake,,0.216,,0,reviewed,ci,ci
+2014-08-24T10:20:44.070Z,38.2151667,-122.3123333,11.12,6.02,mw,369,28,0.03604,0.18,nc,nc72282711,2019-11-14T04:59:23.906Z,South Napa,earthquake,0.11,0.15,,0,reviewed,nc,nc
+1986-07-08T09:20:44.560Z,33.999,-116.608,9.468,6,mw,0,26.6,,0.092,ci,ci700917,2019-05-16T03:16:40.689Z,"6km SSW of Morongo Valley, CA",earthquake,,0.015,,0,reviewed,ci,ci
