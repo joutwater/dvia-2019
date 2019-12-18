@@ -30,8 +30,8 @@
       font-size: 14px;
       font-family: 'Source Sans Pro';
       text-align: center;
-			margin-left: 275px;
-			margin-right: 275px;
+			margin-left: 285px;
+			margin-right: 285px;
 			margin-bottom: 10px;
     }
 
@@ -46,7 +46,7 @@
     #sketch-holder{
       text-align: center;
       margin-top: -70px;
-      margin-bottom: 10px;
+      margin-bottom: 100px;
 
       
     }
@@ -67,11 +67,20 @@
 <body>
   <h1>The Big One</h1>
   <h2>Even in this day and age, top seismologists at USGS and other organizations are unable to predict earthquakes. However, many specialists have pointed out that they expect the infamous “big one” to rock California in the next thirty to fifty years. The primary evidence leading to this claim is that portions of the San Andreas Faultline and subsidiary faults have been in lock since the mid-twentieth century. Once the tectonic plates force these fault crusts out of lock, it will theoretically cause a large earthquake. As a Californian and geospatial specialist, I humbly wish to make a best guess as to where and at what depth the "big one" will occur. If scientists can’t predict it anyways, why not practice some mapping techniques and give it a try!</h2>
-  <h3>Explore the map layers and cross section diagram below to see if you agree with my location choice for the "big one". Clicking earthquake locations on the map will reveal data and highlight the corresponding earthquake in the cross section diagram, showing relative depth and magnitude. You can read my process below the visualiztion.</h3>
+  <h3>Explore the map layers and cross section diagram below to see if you agree with my location choice for the "big one". Clicking earthquake locations on the map will reveal data and highlight the corresponding earthquake in the cross section diagram, showing relative depth (max 13 miles) and magnitude (max 7.3).</h3>
   <!-- The container div for our leaflet map -->
   <div class="wrapper"><div id="quake-map"></div></div>
   <!-- load our dependencies and sketch file -->
   <div id="sketch-holder"></div>
+  <h2>
+    The Big One:<br />
+    Latitude: 34.2° N<br />
+    Longitude: 116.5° W<br />
+    Depth: 10.11 Miles<br />
+    Radius: 25 Miles
+  </h2>
+  
+  <h2>All earthquakes above occurred at a magnitude of 5.0+ between December 1980 and December 2019. At first glance, I urge the user to look at the locations of these earthquakes related to the cross section diagram. The latitudinal nature of the cross section diagram offers densities of vertical lines that correspond to the latitudinal spread of the earthquake locations, hinting the user at certain clusters of earthquakes, but more context is still needed. As the San Andreas fault line and tangent lines are added onto the map, we start to see how these quakes are related to this driving feature of seismic activity. Turning on the clusters layer provides more distinct groups, and when the earthquakes at magnitude 6+ are included, you can see which clusters hosted more large earthquakes. The area with most overlapping variables is where I decided was a likely location for the big one. You can see the grouping on the map has two clusters close to each other with five magnitude 6+ earthquakes in the vicinity. I took a center point approximately located in this zone and added a radius of 25 miles to estimate the coverage of where this event could take place. For the depth, I explored the cross section diagram and then averaged the depths of all earthquakes greater than a magnitude of 6+. The next variable to add in this equation is time....</h2>
   <script src="libraries/leaflet/leaflet.js"></script>
   <script src="libraries/p5.min.js"></script>
   <script src="libraries/chroma.min.js"></script>
