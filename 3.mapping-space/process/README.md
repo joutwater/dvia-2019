@@ -38,5 +38,5 @@ Following a similar exploration, I looked at the same but showing magnitude
 
 Final Product
 
-![alt text](https://github.com/joutwater/dvia-2019/blob/master/3.mapping-space/process/Mag_S_to_N.png)
+![alt text](https://github.com/joutwater/dvia-2019/blob/master/3.mapping-space/process/BO_1_edad3398ed.png)
 
